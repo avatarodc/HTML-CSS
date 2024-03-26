@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+.carre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+.carre2 {
+  transform: rotate(45deg);
+}
+.bord {
+  transition: width 2s;
+  position: absolute;
+  height: 0;
+  width: 0;
+  background-color: white;
+}
+.haut {
+  top: 0;
+  height: 8px;
+}
+.bas {
+  bottom: 0;
+  height: 8px;
+}
+.gauche {
+  z-index: 3;
+  left: 0;
+  width: 8px;
+}
+.droite {
+  z-index: 3;
+  width: 8px;
+  right: 0;
+}
+.container:hover .bord.haut,
+.container:hover .bord.bas {
+  width: 100%;
+  transition: width 1s;
+}
+
+.container:hover .bord.gauche,
+.container:hover .bord.droite {
+  height: 100%;
+  transition: height 1s 1s;
+}
+.container:hover .carre2 .bord.haut,
+.container:hover .carre2 .bord.bas {
+  width: 100%;
+  transition: width 1s 1.5s;
+}
+
+.container:hover .carre2 .bord.gauche,
+.container:hover .carre2 .bord.droite {
+  height: 100%;
+  transition: height 1s 2.5s;
+}
+.text {
+  text-transform: uppercase;
+  transform: rotate(-45deg);
+  font-size: 2.5em;
+  text-align: center;
+}
+span {
+  font-size: 2em;
+  color: white;
+}

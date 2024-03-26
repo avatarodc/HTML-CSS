@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    height: 100px;
+    width: 300px;
+    border: 5px solid white;
+    position: relative;
+    background-color: white;
+    color: black;
+}
+
+.boite {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 300px;
+}
+
+span {
+    font-size: 2.5em;
+}
+
+.text {
+    color: white;
+}
+.boite{
+    transition:transform 0.1s 0.1s,left 1s ,opacity 1.8s 0.1s;
+    left: 0;
+}
+.boite1 {
+    background-color: black;
+}
+
+.boite2 {
+    background-color: black;
+}
+
+.container:hover .boite1 {
+    transform: rotateY(180deg);
+    left: -500px;
+    opacity: 0;
+}
+
+.container:hover .boite2 {
+    transform: rotateY(-180deg);
+    left: 500px;
+    opacity: 0;
+}
+.container:hover .text{
+    font-size:1.5em;
+}

@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+}
+
+.container {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.texte {
+    color: rgb(233, 10, 10);
+    font-size: 3em;
+    position: absolute;
+    z-index: 2;
+}
+
+.cercle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(183, 52, 52, 0.638);
+    position: absolute;
+    transition: left .5s, right .5s;
+}
+
+.circle {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(183, 52, 52);
+    position: absolute;
+    opacity: 0;
+    transition: width 1s .5s, height 1s .5s, opacity 0s .6s;
+}
+
+.cercle1 {
+    left: -20%;
+}
+
+.cercle2 {
+    left: -40%;
+}
+
+.cercle3 {
+    right: -20%;
+}
+
+.cercle4 {
+    right: -40%;
+}
+
+.container:hover .cercle1 {
+    left: 30%;
+}
+
+.container:hover .cercle2 {
+    left: 46%;
+}
+
+.container:hover .cercle3 {
+    right: 46%;
+}
+
+.container:hover .cercle4 {
+    right: 30%;
+}
+
+.container:hover .texte {
+    color: rgb(255, 254, 254);
+}
+
+
+.container:hover .back {
+    width:350px;
+    height: 100px;
+    opacity: 1;
+    border-radius: 15px;
+    
+}
+
+.container:not(:hover) .circle{
+    border-radius: 15px;
+width: 0;
+height: 0;
+transition: width 3s, height 3s, opacity 2s;
+
+
+}

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    height: 150px;
+    width: 300px;
+    border: 8px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.car{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car2{
+    top: -140px;
+    background-color: darkred;
+    transition: top 2s;
+    color: white;
+    
+}
+
+.test , .test1{
+    font-size: 3em;
+}
+.car1{
+    background-color: white;
+    color: black;
+}
+
+.container:hover .car2{
+    top: 0;
+    transition: top 2s;
+
+}
+
+

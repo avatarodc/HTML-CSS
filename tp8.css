@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkred;
+    background-color: black;
+    
+
+}
+.container{
+    height: 98px;
+    width: 300px;
+    border: 6px solid ;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.car{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car2{ 
+    top: -125px;
+    background-color:red;
+    transition: top 1.5s,border-radius 2s 0.2s;
+    height: 122px;
+    
+}
+ .test{
+    font-size: 3em;
+    z-index: 6;
+}
+
+.container:hover .car2{
+    top: 0;
+    border-radius: 0 0 40% 40%;
+
+}
+
+
+

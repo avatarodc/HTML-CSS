@@ -1,0 +1,48 @@
+* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body , html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pharmacy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10%;
+            width: 20%;
+            border: 2px solid black; 
+            position: relative;
+        }
+        .bar {
+            position: absolute;
+            background: green;
+        }
+
+        .horizontal {
+            width: 100%;
+            height: 0;
+            transition: height 0.5s;
+        }
+        .vertical{
+            width: 0;
+            height: 100%;
+            transition: width 0.5s;
+        }
+        .pharmacy:hover .vertical{ 
+           width: 50%;
+          
+        }
+        .pharmacy:hover .horizontal{ 
+           height: 45%;
+           
+        }
+        .pharmacy-text{
+            z-index: 3;
+        }
